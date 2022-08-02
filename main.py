@@ -52,9 +52,7 @@ df.loc[(df['work_interfere'].isna()), 'work_interfere'] = 'Sometimes'
 
 df.loc[(df['leave'].isin(["Don't know"])), 'leave'] = 'Somewhat difficult'
 
-# df.loc[(df['coworkers'].isin(["Some of them"])), 'coworkers'] = 'No'
 
-# df.loc[(df['supervisor'].isin(["Some of them"])), 'supervisor'] = 'No'
 
 df.loc[(df['Age'].isin(range(0, 19))), 'Age_Grp'] = 'Kids & Teens'
 df.loc[(df['Age'].isin(range(19, 30))), 'Age_Grp'] = "Young Adults"
@@ -70,11 +68,6 @@ for i in df.columns:
 
 df = df.dropna()
 
-# for i in df.columns:
-#    print(i)
-#    print(df[i].unique())
-# df.loc[(df['Age'].isin(range(0, 19))), 'Age_Grp'] = 'Kids & Teens'
-#print(df['treatment'].sum())
 
 
 f1=plt.figure(1)
@@ -132,19 +125,3 @@ dfg.plot(kind='bar')
 plt.show()
 
 input()
-
-# lbls_values = [df['treatment'].value_counts().Yes
-#    , df['family_history'].value_counts().Yes, df['obs_consequence'].value_counts().Yes]
-
-# lbls = ['treatment']
-
-
-# print(len(df))
-
-# print(df['treatment'].value_counts())
-# x = np.array(["yes", "no"])
-# plot_treatment = data.plot.hist(column=['state'])
-# df.groupby(['Country'])
-
-# plt.bar(df['treatment'].unique(),df['treatment'].value_counts())
-# plt.show()
