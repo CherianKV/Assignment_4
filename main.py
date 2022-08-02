@@ -68,6 +68,7 @@ for i in df.columns:
 df = df.dropna()
 
 
+
 f1=plt.figure(1)
 dfg = df.groupby(['Country'])['treatment'].sum()
 plt.title('Number of people who had treatment for mental health issues')
