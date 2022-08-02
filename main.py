@@ -53,7 +53,6 @@ df.loc[(df['work_interfere'].isna()), 'work_interfere'] = 'Sometimes'
 df.loc[(df['leave'].isin(["Don't know"])), 'leave'] = 'Somewhat difficult'
 
 
-
 df.loc[(df['Age'].isin(range(0, 19))), 'Age_Grp'] = 'Kids & Teens'
 df.loc[(df['Age'].isin(range(19, 30))), 'Age_Grp'] = "Young Adults"
 df.loc[(df['Age'].isin(range(30, 50))), 'Age_Grp'] = 'Middle Aged'
